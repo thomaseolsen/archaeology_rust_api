@@ -7,8 +7,7 @@ on:
       - "tests/**"
       - "Cargo.*"
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 defaults:
   run:
