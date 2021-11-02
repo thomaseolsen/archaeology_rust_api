@@ -1,0 +1,26 @@
+[package]
+name = "archaeology_rust_api"
+version = "0.0.1"
+license = "GPL3"
+authors = ["Thomas Erik Olsen <olsencode@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/thomaseolsen/archaeology_rust_api"
+homepage = "https://github.com/thomaseolsen/archaeology_rust_api"
+# documentation = "https://docs.rs/"
+description = """
+API backend written in Rust for the Archaeology Field Notebook.
+"""
+categories = ["backend", "archaeology", "data"]
+edition = "2021"
+
+[workspace]
+members = [
+  "./"
+]
+
+[dependencies]
+actix-web = "3"
+
+[dev-dependencies]
+env_logger = "0.9.0"
+rand = "0.8.4"
