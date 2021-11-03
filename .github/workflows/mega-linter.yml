@@ -1,0 +1,36 @@
+name: Mega-Linter
+
+on:
+  pull_request:
+    branches: [main]
+
+env:
+  APPLY_FIXES: all
+  APPLY_FIXES_EVENT: pull_request
+  APPLY_FIXES_MODE: commit
+
+jobs:
+  build:
+    name: Mega-Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Mega-Linter
+        uses: megalinter/megalinter/flavors/rust@v5
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          SPELL_CSPELL_CONFIG_FILE: cspell.json
+
+      - name: Archive production artifacts
+        if: ${{ success() }} || ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Mega-Linter reports
+          path: |
+            report
+            mega-linter.log

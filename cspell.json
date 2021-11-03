@@ -1,0 +1,7 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["actix", "megalinter", "rustfmt"],
+  "flagWords": ["hte"],
+  "ignorePaths": ["cspell.json"]
+}
