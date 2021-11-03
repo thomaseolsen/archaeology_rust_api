@@ -3,5 +3,5 @@
   "language": "en",
   "words": ["actix", "megalinter", "rustfmt"],
   "flagWords": ["hte"],
-  "ignorePaths": ["node_modules/**"]
+  "ignorePaths": ["cspell.json"]
 }
