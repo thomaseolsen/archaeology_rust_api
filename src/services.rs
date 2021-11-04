@@ -1,2 +1,2 @@
+pub mod area_service;
 pub mod site_service;
-pub mod test_service;
