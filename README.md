@@ -7,3 +7,7 @@
 ![Repo Size](https://img.shields.io/github/repo-size/thomaseolsen/archaeology_rust_api?label=Repo%20Size)
 
 A backend API for the Archaeology Field Notebook written in Rust
+
+[] Add the rest of the API endpoints
+[] Containerize the application
+[] Initiate cross-talk between this container and the SQL container
