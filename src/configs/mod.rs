@@ -12,3 +12,9 @@ pub fn site_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/{site}", web::get().to(services::site_service::get_site));
     cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
 }
+
+pub fn team_config(cfg: &mut web::ServiceConfig) {
+    cfg.route("/", web::post().to(services::team_service::post_team));
+    cfg.route("/{team}", web::get().to(services::team_service::get_team));
+    cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
+}
