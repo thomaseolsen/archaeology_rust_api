@@ -150,6 +150,78 @@
 			]
 		},
 		{
+			"name": "Supervisor",
+			"item": [
+				{
+					"name": "Get Supervisor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/services/supervisor/CLO",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"services",
+								"supervisor",
+								"CLO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Supervisor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Cherie Lynn\",\n    \"middle_name\": \"\",\n    \"last_name\": \"Olsen\",\n    \"initials\": \"CLO\",\n    \"email\": \"cherielynnolsen@southern.edu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/services/supervisor/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"services",
+								"supervisor",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Team",
 			"item": [
 				{
