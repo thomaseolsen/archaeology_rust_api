@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # This script provides an automated process to create scaffolds for new objects within this project.
 

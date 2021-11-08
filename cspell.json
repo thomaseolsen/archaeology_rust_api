@@ -1,7 +1,11 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["actix", "megalinter", "rustfmt"],
+  "words": ["actix", "megalinter", "newobject", "rustfmt"],
   "flagWords": ["hte"],
-  "ignorePaths": ["cspell.json"]
+  "ignorePaths": [
+    "archaeology_rust_api.postman_collection.json",
+    "cspell.json",
+    "templates/newObject.sh"
+  ]
 }
