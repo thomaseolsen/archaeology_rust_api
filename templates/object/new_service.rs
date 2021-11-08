@@ -2,7 +2,7 @@ use crate::models::newobject_model;
 use actix_web::{HttpRequest, Responder, Result, web};
 
 /*
- * POST method for the newobject.
+ * POST method for the NewObject.
  * Writes the passed object to the database.
  */
 pub async fn post_newobject(data: web::Json<newobject_model::NewObject>) -> Result<web::Json<newobject_model::NewObject>> {
@@ -11,7 +11,7 @@ pub async fn post_newobject(data: web::Json<newobject_model::NewObject>) -> Resu
 }
 
 /*
- * GET method for the newobject.
+ * GET method for the NewObject.
  * Queries the requested object from the database.
  */
 pub async fn get_newobject(req: HttpRequest) -> impl Responder {

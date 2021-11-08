@@ -13,6 +13,12 @@ pub fn site_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
 }
 
+pub fn square_config(cfg: &mut web::ServiceConfig) {
+    cfg.route("/", web::post().to(services::square_service::post_square));
+    cfg.route("/{square}", web::get().to(services::square_service::get_square));
+    cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
+}
+
 pub fn supervisor_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/", web::post().to(services::supervisor_service::post_supervisor));
     cfg.route("/{supervisor}", web::get().to(services::supervisor_service::get_supervisor));

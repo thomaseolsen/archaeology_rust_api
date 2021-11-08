@@ -1,19 +1,19 @@
 use serde::{Deserialize, Serialize};
 
 /*
- * A struct of the pertinent display fields for NewObject
+ * A struct of the pertinent display fields for Square
  */
 #[derive(Serialize, Deserialize)]
-pub struct NewObject {
+pub struct Square {
     name: String,
     description: String
 }
 
 /*
- * A struct of the relational fields for NewObject as it exists in the database
+ * A struct of the relational fields for Square as it exists in the database
  */
 #[derive(Serialize, Deserialize)]
-pub struct NewObjectRel {
+pub struct SquareRel {
     id: String,
     name: String,
     description: String

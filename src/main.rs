@@ -15,6 +15,7 @@ async fn main() -> std::io::Result<()> {
             .route("/", web::get().to(welcome))
             .service(web::scope("/services/area").configure(configs::area_config))
             .service(web::scope("/services/site").configure(configs::site_config))
+            .service(web::scope("/services/square").configure(configs::square_config))
             .service(web::scope("/services/supervisor").configure(configs::supervisor_config))
             .service(web::scope("/services/team").configure(configs::team_config))
     })
