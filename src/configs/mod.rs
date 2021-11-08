@@ -7,7 +7,7 @@ pub fn area_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
 }
 
-pub fn site_config(cfg: &mut web::ServiceConfig) {
+pub fn locus_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/", web::post().to(services::locus_service::post_locus));
     cfg.route("/{locus}", web::get().to(services::locus_service::get_locus));
     cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
