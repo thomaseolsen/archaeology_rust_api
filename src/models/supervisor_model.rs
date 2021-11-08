@@ -1,5 +1,8 @@
 use serde::{Deserialize, Serialize};
 
+/*
+ * A struct of the pertinent display fields for Supervisor
+ */
 #[derive(Serialize, Deserialize)]
 pub struct Supervisor {
     first_name: String,
@@ -9,6 +12,9 @@ pub struct Supervisor {
     email: String
 }
 
+/*
+ * A struct of the relational fields for Supervisor as it exists in the database
+ */
 #[derive(Serialize, Deserialize)]
 pub struct SupervisorRel {
     id: String,
