@@ -1,8 +1,12 @@
 name: Mega-Linter
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 env:
   APPLY_FIXES: all
