@@ -1,21 +1,24 @@
+mod configs;
+mod models;
 mod services;
 
-use services::test_service;
+use actix_web::{web, App, HttpServer, Responder};
 
-use actix_web::{web, App, HttpRequest, HttpServer, Responder};
-
-async fn greet(req: HttpRequest) -> impl Responder {
-    let name = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", &name)
+async fn welcome() -> impl Responder {
+    format!("Welcome to the Archaeology API written in Rust!")
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-            .service(web::scope("/services").configure(test_service::test_config))
-            .route("/", web::get().to(greet))
-            .route("/{name}", web::get().to(greet))
+            .route("/", web::get().to(welcome))
+            .service(web::scope("/services/area").configure(configs::area_config))
+            .service(web::scope("/services/locus").configure(configs::locus_config))
+            .service(web::scope("/services/site").configure(configs::site_config))
+            .service(web::scope("/services/square").configure(configs::square_config))
+            .service(web::scope("/services/supervisor").configure(configs::supervisor_config))
+            .service(web::scope("/services/team").configure(configs::team_config))
     })
     .bind(("127.0.0.1", 8080))?
     .run()
