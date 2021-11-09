@@ -8,6 +8,8 @@
 
 A backend API for the Archaeology Field Notebook written in Rust
 
+[Postman API Documentation](https://documenter.getpostman.com/view/7571330/UVC5F87C)
+
 * [ ] Add the rest of the API endpoints
 * [ ] Containerize the application
 * [ ] Initiate cross-talk between this container and the SQL container

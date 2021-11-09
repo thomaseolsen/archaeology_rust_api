@@ -1,13 +1,14 @@
 use crate::models::square_model;
-use actix_web::{HttpRequest, Responder, Result, web};
+use actix_web::{http, HttpRequest, Responder, web};
 
 /*
  * POST method for the Square.
  * Writes the passed object to the database.
  */
-pub async fn post_square(data: web::Json<square_model::Square>) -> Result<web::Json<square_model::Square>> {
+pub async fn post_square(data: web::Json<square_model::Square>) -> impl Responder {
     // Not doing anything, just returning a confirmation that we've received the data packet.
-    Ok(data)
+    data
+        .with_status(http::StatusCode::CREATED)
 }
 
 /*

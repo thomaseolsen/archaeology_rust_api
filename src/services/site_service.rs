@@ -1,13 +1,14 @@
 use crate::models::site_model;
-use actix_web::{HttpRequest, Responder, Result, web};
+use actix_web::{http, HttpRequest, Responder, web};
 
 /*
  * POST method for the Site.
  * Writes the passed object to the database.
  */
-pub async fn post_site(data: web::Json<site_model::Site>) -> Result<web::Json<site_model::Site>> {
+pub async fn post_site(data: web::Json<site_model::Site>) -> impl Responder {
     // Not doing anything, just returning a confirmation that we've received the data packet.
-    Ok(data)
+    data
+        .with_status(http::StatusCode::CREATED)
 }
 
 /*
