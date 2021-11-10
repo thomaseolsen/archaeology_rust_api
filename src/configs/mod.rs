@@ -4,6 +4,7 @@ use actix_web::{web, HttpResponse};
 pub fn area_config(cfg: &mut web::ServiceConfig) {
     cfg.route("/", web::post().to(services::area_service::post_area));
     cfg.route("/{area}", web::get().to(services::area_service::get_area));
+    cfg.route("/assign_team/", web::post().to(services::area_service::post_area_team));
     cfg.route("/", web::head().to(|| HttpResponse::MethodNotAllowed()));
 }
 
