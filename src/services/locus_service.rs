@@ -8,6 +8,7 @@ use actix_web::{http, HttpRequest, Responder, web};
 pub async fn post_locus(data: web::Json<locus_model::Locus>) -> impl Responder {
     // Not doing anything, just returning a confirmation that we've received the data packet.
     data
+        .customize()
         .with_status(http::StatusCode::CREATED)
 }
 
