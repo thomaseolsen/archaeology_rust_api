@@ -4,8 +4,11 @@
   "words": ["actix", "megalinter", "newobject", "rustfmt"],
   "flagWords": ["hte"],
   "ignorePaths": [
+    "**/.github/**",
     "archaeology_rust_api.postman_collection.json",
     "cspell.json",
-    "templates/newObject.sh"
+    "templates/newObject.sh",
+    ".gitignore",
+    ".vscode"
   ]
 }
