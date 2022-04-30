@@ -7,7 +7,7 @@
 [![SonarCloud](https://github.com/thomaseolsen/archaeology_rust_api/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/thomaseolsen/archaeology_rust_api/actions/workflows/sonarcloud.yml)
 ![Repo Size](https://img.shields.io/github/repo-size/thomaseolsen/archaeology_rust_api?label=Repo%20Size)
 
-A backend API for the Archaeology Field Notebook written in Rust 
+A backend API for the Archaeology Field Notebook written in Rust
 
 [Postman API Documentation](https://documenter.getpostman.com/view/7571330/UVC5F87C)
 
